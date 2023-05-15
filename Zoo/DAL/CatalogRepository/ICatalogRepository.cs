@@ -1,10 +1,10 @@
 ﻿using Zoo.Models;
 
-namespace Zoo.DAL.Catalog
+namespace Zoo.DAL.CatalogRepository
 {
     public interface ICatalogRepository
     {
         IEnumerable<Category> Categories { get; }
-        Category? GetCategory(int id);
+        Task<Category?> GetCategory(int id);
     }
 }

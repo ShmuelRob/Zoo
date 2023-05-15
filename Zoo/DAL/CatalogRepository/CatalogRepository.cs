@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Zoo.Models;
 
-namespace Zoo.DAL.Catalog
+namespace Zoo.DAL.CatalogRepository
 {
     public class CatalogRepository : ICatalogRepository
     {
@@ -10,7 +10,7 @@ namespace Zoo.DAL.Catalog
         public virtual IEnumerable<Category> Categories => context.Categories!
             .Include(c => c.Animals)!.ThenInclude(a => a.Comments);
 
-        public Category? GetCategory(int id) =>
-            Categories.SingleOrDefault(c => c.CategoryID == id);
+        public async Task<Category?> GetCategory(int id) =>
+            await Task.Run(() => Categories.SingleOrDefault(c => c.CategoryId == id));
     }
 }

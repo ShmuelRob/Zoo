@@ -32,37 +32,37 @@ namespace Zoo.DAL
 
 
             modelBuilder.Entity<Category>().HasData(
-                new { CategoryID = 1, Name = "Mammal" },
-                new { CategoryID = 2, Name = "Birds" },
-                new { CategoryID = 3, Name = "Fish" },
-                new { CategoryID = 4, Name = "Amphibians" },
-                new { CategoryID = 5, Name = "reptiles" }
+                new { CategoryId = 1, Name = "Mammal" },
+                new { CategoryId = 2, Name = "Birds" },
+                new { CategoryId = 3, Name = "Fish" },
+                new { CategoryId = 4, Name = "Amphibians" },
+                new { CategoryId = 5, Name = "reptiles" }
                 );
 
 
             modelBuilder.Entity<Animal>().HasData(
-                new { AnimalID = 1, CategoryID = 1, Age = 5, Name = "Lion", ImageSource = sources[1], Description = "description for lion" },
-                new { AnimalID = 2, CategoryID = 1, Age = 2, Name = "Dog", ImageSource = sources[2], Description = "description for dog" },
-                new { AnimalID = 3, CategoryID = 2, Age = 12, Name = "Eagle", ImageSource = sources[3], Description = "description for eagle" },
-                new { AnimalID = 4, CategoryID = 3, Age = 3, Name = "Shark", ImageSource = sources[4], Description = "description for shark" },
-                new { AnimalID = 5, CategoryID = 1, Age = 4, Name = "Cat", ImageSource = sources[5], Description = "description for cat" },
-                new { AnimalID = 6, CategoryID = 5, Age = 1, Name = "Chameleon", ImageSource = sources[6], Description = "description for chameleon" },
-                new { AnimalID = 7, CategoryID = 3, Age = 15, Name = "Whale", ImageSource = sources[7], Description = "description for whale" },
-                new { AnimalID = 8, CategoryID = 2, Age = 2, Name = "Pigeon", ImageSource = sources[8], Description = "description for pigeon" },
-                new { AnimalID = 9, CategoryID = 5, Age = 4, Name = "Alligator", ImageSource = sources[9], Description = "description for alligator" },
-                new { AnimalID = 10, CategoryID = 2, Age = 9, Name = "Owl", ImageSource = sources[10], Description = "description for owl" }
+                new { AnimalId = 1, CategoryId = 1, Age = 5, Name = "Lion", ImageSource = sources[1], Description = "description for lion" },
+                new { AnimalId = 2, CategoryId = 1, Age = 2, Name = "Dog", ImageSource = sources[2], Description = "description for dog" },
+                new { AnimalId = 3, CategoryId = 2, Age = 12, Name = "Eagle", ImageSource = sources[3], Description = "description for eagle" },
+                new { AnimalId = 4, CategoryId = 3, Age = 3, Name = "Shark", ImageSource = sources[4], Description = "description for shark" },
+                new { AnimalId = 5, CategoryId = 1, Age = 4, Name = "Cat", ImageSource = sources[5], Description = "description for cat" },
+                new { AnimalId = 6, CategoryId = 5, Age = 1, Name = "Chameleon", ImageSource = sources[6], Description = "description for chameleon" },
+                new { AnimalId = 7, CategoryId = 3, Age = 15, Name = "Whale", ImageSource = sources[7], Description = "description for whale" },
+                new { AnimalId = 8, CategoryId = 2, Age = 2, Name = "Pigeon", ImageSource = sources[8], Description = "description for pigeon" },
+                new { AnimalId = 9, CategoryId = 5, Age = 4, Name = "Alligator", ImageSource = sources[9], Description = "description for alligator" },
+                new { AnimalId = 10, CategoryId = 2, Age = 9, Name = "Owl", ImageSource = sources[10], Description = "description for owl" }
                 );
 
 
             modelBuilder.Entity<Comment>().HasData(
-                new { CommentID = 1, AnimalID = 1, Content = "king of animals", Visitor = "Admin" },
-                new { CommentID = 2, AnimalID = 2, Content = "the man's best friend", Visitor = "Shmuel" },
-                new { CommentID = 3, AnimalID = 1, Content = "Simba is his brother" },
-                new { CommentID = 4, AnimalID = 5, Content = "licks itself", Visitor = "Moshe" },
-                new { CommentID = 5, AnimalID = 6, Content = "can change colors", Visitor = "David" },
-                new { CommentID = 6, AnimalID = 7, Content = "the biggest fish in the world", Visitor = "Yossi" },
-                new { CommentID = 7, AnimalID = 9, Content = "you don't want to mess with this guy..." },
-                new { CommentID = 8, AnimalID = 10, Content = "the smartest bird", Visitor = "Avi" }
+                new { CommentId = 1, AnimalId = 1, Content = "king of animals", Visitor = "Admin" },
+                new { CommentId = 2, AnimalId = 2, Content = "the man's best friend", Visitor = "Shmuel" },
+                new { CommentId = 3, AnimalId = 1, Content = "Simba is his brother" },
+                new { CommentId = 4, AnimalId = 5, Content = "licks itself", Visitor = "Moshe" },
+                new { CommentId = 5, AnimalId = 6, Content = "can change colors", Visitor = "David" },
+                new { CommentId = 6, AnimalId = 7, Content = "the biggest fish in the world", Visitor = "Yossi" },
+                new { CommentId = 7, AnimalId = 9, Content = "you don't want to mess with this guy..." },
+                new { CommentId = 8, AnimalId = 10, Content = "the smartest bird", Visitor = "Avi" }
                 );
         }
     }
