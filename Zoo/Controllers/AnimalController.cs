@@ -22,17 +22,18 @@ namespace Zoo.Controllers
         }
 
         [HttpPost("{id}")]
-        public async Task<IActionResult> CreateComment(int id, [FromBody] string content, [FromBody] string visitor)
+        public async Task<IActionResult> CreateComment(int id, [FromBody] Comment comment)
         {
             var animal = await repository.GetAnimal(id);
             if (animal is null) return NotFound();
-            if (content is null) return NotFound();
+            if (comment is null) return NotFound();
+            if (comment.Content is null) return NotFound();
             var newComment = new Comment
             {
                 AnimalId = id,
                 AnimalCommented = animal,
-                Content = content,
-                Visitor = visitor
+                Content = comment.Content,
+                Visitor = comment.Visitor
             };
             await repository.AddComment(id, newComment);
             animal.Comments!.Add(newComment);

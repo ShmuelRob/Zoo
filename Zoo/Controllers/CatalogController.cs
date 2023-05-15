@@ -12,12 +12,19 @@ namespace Zoo.Controllers
         public CatalogController(ICatalogRepository repository)
             => this.repository = repository;
 
+        [HttpGet]
+        public IActionResult GetCategories()
+        {
+            var categories = repository.Categories.Select(c => new { c.Name, c.CategoryId });
+            return Ok(categories);
+        }
+
         [HttpGet("{id}")]
-        public IActionResult GetCategories(int id)
+        public IActionResult GetCategoryById(int id)
         {
             var category = repository.GetCategory(id);
             category ??= repository.GetCategory(1);
-            return new JsonResult(category);
+            return Ok(category);
         }
     }
 }
